@@ -1,4 +1,4 @@
-# Foundation libsass template
+# Foundation libsass template [![Build Status](https://travis-ci.org/johngerome/foundation-5-grunt-with-build-script.png?branch=master)](https://travis-ci.org/johngerome/foundation-5-grunt-with-build-script)
 
 This is a template to start your own project that uses Grunt and libsass!
 
