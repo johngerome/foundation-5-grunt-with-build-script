@@ -5,15 +5,11 @@ module.exports = function(grunt) {
     sass: {
       watch: {
         options: {
-          includePaths: ['bower_components/foundation/scss']
+          includePaths: ['bower_components/foundation/scss'],
+          outputStyle: 'compressed'
         },
-        dist: {
-          options: {
-            outputStyle: 'compressed'
-          },
-          files: {
-            'css/app.css': 'scss/app.scss'
-          }        
+        files: {
+          'css/app.min.css': 'scss/app.scss'
         }
       },
 
@@ -23,7 +19,7 @@ module.exports = function(grunt) {
           outputStyle: 'compressed'
         },
         files: {
-          'build/css/app.min..css': 'scss/app.scss'
+          'build/css/app.min.css': 'scss/app.scss'
         }
       }
 
