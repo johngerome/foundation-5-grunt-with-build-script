@@ -20,9 +20,12 @@ While you're working on your project, run:
 
 `grunt`
 
-And you're set!
+to build you're project, run:
+
+`grunt build`
 
 ## Directory Strucutre
 
   * `scss/_settings.scss`: Foundation configuration settings go in here
   * `scss/app.scss`: Application styles go here
+  * `build`: Application build styles and scripts go here
