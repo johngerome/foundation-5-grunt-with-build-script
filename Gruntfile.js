@@ -44,7 +44,7 @@ module.exports = function(grunt) {
         files: {
           'build/js/scripts.min.js': ['bower_components/foundation/js/vendor/jquery.js', 'bower_components/foundation/js/foundation.js'],
           'build/js/modernizr.min.js': ['bower_components/foundation/js/vendor/modernizr.js'],
-          'build/js/app.min.min.js': ['js/app.js']
+          'build/js/app.min.js': ['js/app.js']
         }
       }
    },
