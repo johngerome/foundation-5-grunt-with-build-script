@@ -16,6 +16,10 @@ You'll need to have the following items installed before continuing.
 npm install && bower install
 ```
 
+before you start your project build it first
+
+`grunt build`
+
 While you're working on your project, run:
 
 `grunt`
@@ -28,4 +32,3 @@ to build you're project, run:
 
   * `scss/_settings.scss`: Foundation configuration settings go in here
   * `scss/app.scss`: Application styles go here
-  * `build`: Application build styles and scripts go here

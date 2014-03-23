@@ -6,10 +6,10 @@ module.exports = function(grunt) {
       watch: {
         options: {
           includePaths: ['bower_components/foundation/scss'],
-          outputStyle: 'compressed'
+          outputStyle: 'nested' // nested, compact, compressed, expanded.
         },
         files: {
-          'css/app.min.css': 'scss/app.scss'
+          'assets/css/app.css': 'scss/app.scss'
         }
       },
 
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
           outputStyle: 'compressed'
         },
         files: {
-          'build/css/app.min.css': 'scss/app.scss'
+          'assets/css/app.css': 'scss/app.scss'
         }
       }
 
@@ -31,9 +31,7 @@ module.exports = function(grunt) {
           mangle: false,
         },
         files: {
-          'js/scripts.min.js': ['bower_components/foundation/js/vendor/jquery.js', 'bower_components/foundation/js/foundation.js'],
-          'js/modernizr.min.js': ['bower_components/foundation/js/vendor/modernizr.js'],
-          'js/app.min.js': ['js/app.js']
+          'assets/js/app.min.js': ['js/app.js']
         }
       },
 
@@ -42,9 +40,9 @@ module.exports = function(grunt) {
           mangle: false,
         },
         files: {
-          'build/js/scripts.min.js': ['bower_components/foundation/js/vendor/jquery.js', 'bower_components/foundation/js/foundation.js'],
-          'build/js/modernizr.min.js': ['bower_components/foundation/js/vendor/modernizr.js'],
-          'build/js/app.min.js': ['js/app.js']
+          'assets/js/scripts.min.js': ['bower_components/foundation/js/vendor/jquery.js', 'bower_components/foundation/js/foundation.js'],
+          'assets/js/modernizr.min.js': ['bower_components/foundation/js/vendor/modernizr.js'],
+          'assets/js/app.min.js': ['js/app.js']
         }
       }
    },
@@ -54,12 +52,12 @@ module.exports = function(grunt) {
       grunt: { files: ['Gruntfile.js'] },
 
       sass: {
-        files: 'scss/**/*.scss',
+        files: ['scss/**/*.scss'],
         tasks: ['sass:watch']
       },
       uglify: {
-        files: ['bower_components/foundation/js/*', 'js/*'],
-        tasks: 'uglify:watch'
+        files: ['js/*'],
+        tasks: ['uglify:watch']
       }
     }
   });
