@@ -5,6 +5,7 @@ module.exports = function(grunt) {
       sass: {
         watch: {
           options: {
+            includePaths: ['bower_components/foundation/scss']
             style: 'nested' // nested, compact, compressed, expanded.
           },
           files: {
