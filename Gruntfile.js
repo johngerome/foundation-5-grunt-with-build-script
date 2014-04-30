@@ -3,9 +3,12 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
       sass: {
+        options: {
+            loadPath: ['bower_components/foundation/scss'],
+            quiet: true
+        },
         watch: {
           options: {
-            includePaths: ['bower_components/foundation/scss'],
             style: 'nested' // nested, compact, compressed, expanded.
           },
           files: {
@@ -55,7 +58,7 @@ module.exports = function(grunt) {
 
         sass: {
           files: ['scss/*.scss', 'scss/**/**/*.scss'],
-          tasks: ['sass:watch']
+          tasks: ['sass']
         },
         uglify: {
           files: ['js/*.js'],
